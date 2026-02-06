@@ -67,6 +67,9 @@ servers:
       apiRoot:
         default: http://localhost:14900
         description: API root, defined by the service provider, e.g. `api.example.com` or `api.example.com/somepath`
+      vccid:
+        default: "666666"
+        description: The VCC id used in server URL
 tags:
   - name: Voice Verification Code Outbound Request
     description: Voice Verification Code Outbound Request
@@ -284,24 +287,24 @@ components:
       description: Request result code.
       type: string
       enum:
-        - 1000
-        - 1001
-        - 1002
-        - 1003
-        - 1004
-        - 1005
-        - 1006
-        - 1007
-        - 1008
-        - 1009
-        - 1010
-        - 1011
-        - 1012
-        - 1013
-        - 1100
-        - 1101
-        - 1102
-        - 1999
+        - "1000"
+        - "1001"
+        - "1002"
+        - "1003"
+        - "1004"
+        - "1005"
+        - "1006"   
+        - "1007"
+        - "1008"
+        - "1009"
+        - "1010"
+        - "1011"
+        - "1012"
+        - "1013"
+        - "1100"
+        - "1101"
+        - "1102"
+        - "1999"
     result_201:
       description: success code.
       type: string
@@ -311,34 +314,34 @@ components:
       description: Bad Request code.
       type: string
       enum:
-        - 1000
-        - 1001
-        - 1002
-        - 1003
-        - 1004
-        - 1005
-        - 1006
-        - 1012
-        - 1013
-        - 1100
-        - 1998
-        - 1999
+        - "1000"
+        - "1001"
+        - "1002"
+        - "1003"
+        - "1004"
+        - "1005"
+        - "1006"
+        - "1012"
+        - "1013"
+        - "1100"
+        - "1998"
+        - "1999"
     result_401:
       description: Unauthorized code.
       type: string
       enum:
-        - 1009
-        - 1010
-        - 1011
+        - "1009"
+        - "1010"
+        - "1011"
     result_403:
       description: Forbidden code.
       type: string
       enum:
-        - 1007
-        - 1008
-        - 1011
-        - 1101
-        - 1102
+        - "1007"
+        - "1008"
+        - "1011"
+        - "1101"
+        - "1102"
 
     reqInfo:
       description: Session related information.
