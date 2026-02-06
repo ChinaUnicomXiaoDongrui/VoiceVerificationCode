@@ -230,7 +230,7 @@ components:
           description: Maximum Digit Length, Default 16
         end:
           type: string
-          description: Terminator Digit, 0-9|*|# (Default #)
+          description: Terminator Digit, 0-9|*|# (Default # )
         cel:
           type: string
           description: Cancel Digit, 0-9|*|# (Default *)
