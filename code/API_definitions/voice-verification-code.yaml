@@ -562,12 +562,9 @@ components:
           allOf:
             - $ref: "#/components/schemas/result_400"
       required:
-        - clientId
-        - vccId
-        - seq
-        - method
-        - chargeExt
-        - result
+        - status
+        - code
+        - message
     resultParameter_401:
       description: The attribute returned at the end of the session
       type: object
@@ -613,12 +610,9 @@ components:
           allOf:
             - $ref: "#/components/schemas/result_401"
       required:
-        - clientId
-        - vccId
-        - seq
-        - method
-        - chargeExt
-        - result
+        - status
+        - code
+        - message
     resultParameter_403:
       description: The attribute returned at the end of the session
       type: object
@@ -664,13 +658,9 @@ components:
           allOf:
             - $ref: "#/components/schemas/result_403"
       required:
-        - clientId
-        - vccId
-        - seq
-        - method
-        - chargeExt
-        - result
-
+        - status
+        - code
+        - message
   responses:
     Generic400:
       description: Bad Request
@@ -699,21 +689,18 @@ components:
     GENERIC_400_INVALID_ARGUMENT:
       description: Invalid Argument. Generic Syntax Exception
       value:
-        clientId: ""
         status: 400
         code: INVALID_ARGUMENT
         message: Client specified an invalid argument,request body or query param.
     GENERIC_401_UNAUTHENTICATED:
       description: Request cannot be authenticated and a new authentication is required
       value:
-        clientId: ""
         status: 401
         code: UNAUTHENTICATED
         message: Request not authenticated due to missing, invalid, or expired credentials. A new authentication is required.
     GENERIC_403_PERMISSION_DENIED:
       description: Permission denied. OAuth2 token access does not have the required scope or when the user fails operational security
       value:
-        clientId: ""
         status: 403
         code: PERMISSION_DENIED
         message: Client does not have sufficient permissions to perform this action.
