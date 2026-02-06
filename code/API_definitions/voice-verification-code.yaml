@@ -293,7 +293,7 @@ components:
         - "1003"
         - "1004"
         - "1005"
-        - "1006"   
+        - "1006"
         - "1007"
         - "1008"
         - "1009"
@@ -699,18 +699,21 @@ components:
     GENERIC_400_INVALID_ARGUMENT:
       description: Invalid Argument. Generic Syntax Exception
       value:
+        clientId: ""
         status: 400
         code: INVALID_ARGUMENT
         message: Client specified an invalid argument,request body or query param.
     GENERIC_401_UNAUTHENTICATED:
       description: Request cannot be authenticated and a new authentication is required
       value:
+        clientId: ""
         status: 401
         code: UNAUTHENTICATED
         message: Request not authenticated due to missing, invalid, or expired credentials. A new authentication is required.
     GENERIC_403_PERMISSION_DENIED:
       description: Permission denied. OAuth2 token access does not have the required scope or when the user fails operational security
       value:
+        clientId: ""
         status: 403
         code: PERMISSION_DENIED
         message: Client does not have sufficient permissions to perform this action.
