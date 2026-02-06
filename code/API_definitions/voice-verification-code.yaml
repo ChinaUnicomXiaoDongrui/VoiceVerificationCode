@@ -283,7 +283,6 @@ components:
     result:
       description: Request result code.
       type: string
-      example: "0000"
       enum:
         - 1000
         - 1001
